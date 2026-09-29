@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "repositories": {
+    "etaf-ncm": {
+      "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-ncm.git",
+      "revision": "b582264a1e04",
+      "branch": "main"
+    }
+  }
+}
