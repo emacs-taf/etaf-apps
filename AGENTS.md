@@ -22,6 +22,13 @@ this directory, ignored by this repository and committed from its own checkout.
   directories to version control.
 - `workspace.json` records each application URL, branch and the verified revision.
   Refresh the revision after publishing an application commit.
+- The copied `scripts/check-repository.py` resolves the provider directory itself: a
+  standalone clone keeps providers beside the application, while an application in this
+  root keeps them two directories up. Preserve that fallback when refreshing the shared
+  tooling, otherwise `make check` cannot resolve `etaf`.
+- `docs/` accepts only the fixed document names (`manual.md`, `architecture.md` and
+  their translations), so screenshots and other media live under `examples/` and the
+  README links to them there (`examples/etaf-ncm.png`).
 
 ## Commands
 
