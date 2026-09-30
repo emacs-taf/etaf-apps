@@ -44,6 +44,29 @@ Look up provider Lisp from the enclosing workspace root with
 `python3 scripts/elisp.py def SYMBOL...` and `python3 scripts/elisp.py run ...`; run
 the application's own checks for application code.
 
+## Measuring interaction stalls
+
+A perceived stall (a hover highlight that cannot keep up, a drag that lags) is
+measured rather than guessed:
+
+- **Stall probe**: schedule a repeating 50 ms timer that records
+  `(- (float-time) (+ start (* n 0.05)))` and report the maximum, the number of
+  samples over 20 ms and over 100 ms.  A healthy idle application stays at
+  1-6 ms; a whole-view publication per second reaches 200-500 ms.
+- **Attribute without editing code**: force the fallback path at runtime by
+  pointing the retained Host it uses at a missing symbol
+  (`(setq etaf-ncm--clock-host 'ncm-missing-host)`), run the same probe, then
+  restore it.  The two runs differ only in which update path is taken.
+- **Compare with interleaved rounds and medians**: alternate the two paths in
+  one session (e.g. 6 rounds of 3 `benchmark-run` iterations each); a single
+  pass on a loaded GUI varies by more than 50%.
+- **Timers only run while Emacs waits**, so drive them in batch with
+  `sleep-for`, not `accept-process-output` (which can block forever when no
+  subprocess exists), and never use `sit-for` there.
+- Measure the *rendered* height of a canvas with `window-text-pixel-size`
+  (it accounts for display properties) rather than counting buffer lines or
+  characters: `posn-at-point` on a line boundary easily reports the wrong row.
+
 ## Reminders
 
 - Commit in the owning repository, not here, when changing an application. This
