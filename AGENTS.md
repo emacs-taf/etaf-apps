@@ -67,6 +67,31 @@ measured rather than guessed:
   (it accounts for display properties) rather than counting buffer lines or
   characters: `posn-at-point` on a line boundary easily reports the wrong row.
 
+## Retained Host updates
+
+A scoped update through ETAF's retained Host boundary (content or geometry) is
+cheap in what it touches and expensive in what it walks:
+
+- It stays scoped: the update report reads `strategy owner-rerender`,
+  `dirty 1`, `patch 1` for a single changed node.
+- Its cost still scales with the view, not with the change: the same scoped
+  content update costs ~13 ms on an 8-row view and ~55 ms on the 30-row player
+  with its lyric panel (measured with `benchmark-run` on the mounted view).
+  Ebox's owner plan and surface plan/fragment walk the whole surface per commit.
+  Treat "scoped" as "correctly targeted", not as "constant time", and expect a
+  per-second scoped update to still cost tens of milliseconds on a full player.
+- Publishing out of band from ETAF's own pipeline is a trap: driving those
+  updates from an application made clicks and menu switches feel late, because
+  the interaction state only caught up on a later publication.  Verify an
+  interaction (a button, a sidebar item) after adding one, and prefer an
+  ordinary publication when the per-second cost is not the bottleneck.
+- A mount can precede the frame resize the window manager performs.  Ebox then
+  records the window's width in its render state while the painted rows still
+  belong to the mount-time viewport, so its own resize path sees nothing to do
+  and the player stays painted at the old canvas.  `etaf-ncm--settle-canvas`
+  repairs it by repainting once at a neighbouring width and once at the real
+  width when a settled window grew across a layout boundary.
+
 ## Reminders
 
 - Commit in the owning repository, not here, when changing an application. This
