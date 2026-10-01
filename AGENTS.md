@@ -97,6 +97,11 @@ untested affordance.
 defines (wide, medium and narrow for the current readers) plus a short height,
 asserting the resolved layout state and the content of each column, and
 reviewing the captures of the states that matter.
+- **Keep every row within the frame line height.** A symbol that falls back to
+a taller font, or a text-style variation selector (U+FE0E), raises its row and
+clips the bottom rows of the canvas; scenarios assert this with
+`etaf-gui-verifier-line-height-assertions` and settle a resize with
+`etaf-gui-verifier-canvas-filled-p`.
 - **Assertions and visual review are separate steps.** A green run certifies the
 behavior it checked, not the appearance: inspect the captures before claiming a
 layout renders as intended.
