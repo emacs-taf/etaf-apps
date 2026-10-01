@@ -78,6 +78,11 @@ the command loop (`execute-kbd-macro`) or activate a control through ETAF's own
 focus (`etaf-focus` + RET). OS-level synthetic clicks do not reach Emacs text
 areas, so the native activation path stands in for a click and the scenario
 records which path each step used.
+- **Mount through the application's offline harness for capture passes.** The
+application's tests already script the client and ship fixtures, so a mount
+paints a full frame immediately; a session against the real backend keeps the
+canvas blank until its service answers and cannot yield a checkpoint. Close the
+verification instance when the pass ends, including a failed one.
 - **Walk every affordance the buffer exposes**: list selection and paging, row
 activation, pane and tab switching, the search input, section navigation,
 refresh, export, open-in-browser (stub the external program), local-index build
