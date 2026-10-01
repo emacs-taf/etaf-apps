@@ -130,6 +130,11 @@ cheap in what it touches and, with the provider's definite-flex-slot projection
 
 ## Reminders
 
+- A binding in an application major-mode map can silently fail when the renderer's minor mode owns the key. In the application buffer, `(key-binding (kbd KEY))` returning a non-application command proves it is shadowed.
+- An application that must replace a renderer-owned key installs a buffer-local `emulation-mode-map-alists` entry while opening the buffer; `etaf-weread--command-maps` in `etaf-weread-open` is the pattern.
+- Use that override only for keys the application owns; preserve renderer semantics such as TAB and focused RET activation.
+- This is not Weread-specific: `etaf-ncm`'s major-mode RET binding is potentially shadowed too.
+
 - Commit in the owning repository, not here, when changing an application. This
   repository's commits cover orchestration, documentation and shared tooling.
 - Never track application directories, byte-compiled output, fetched providers or
