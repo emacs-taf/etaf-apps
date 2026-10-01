@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := check
 .NOTPARALLEL:
 EMACS ?= emacs
-MODULE_DIRS := etaf-ncm
+MODULE_DIRS := etaf-ncm etaf-weread
 
 .PHONY: structure-check setup-hooks compile test check api-check clean
 

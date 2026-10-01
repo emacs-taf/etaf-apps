@@ -2,5 +2,9 @@
   "etaf-ncm": {
     "entry": "etaf-ncm",
     "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-ncm.git"
+  },
+  "etaf-weread": {
+    "entry": "etaf-weread",
+    "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-weread.git"
   }
 }

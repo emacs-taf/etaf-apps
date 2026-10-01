@@ -5,6 +5,11 @@
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-ncm.git",
       "revision": "8b6ee80656b5efda71c58191683b06c827c7a4a7",
       "branch": "main"
+    },
+    "etaf-weread": {
+      "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-weread.git",
+      "revision": "8cdcee9b70284070d34274736220f213c7785704",
+      "branch": "main"
     }
   }
 }

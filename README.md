@@ -8,6 +8,7 @@ follow.
 | Application | Responsibility | Framework dependencies |
 | --- | --- | --- |
 | [etaf-ncm](https://gitea.vhkd.top/geekinney/etaf-ncm) | NetEase Cloud Music player: library browsing, playback control, lyrics and queue | etaf, etaf-ui, ebox |
+| [etaf-weread](https://gitea.vhkd.top/geekinney/etaf-weread) | WeChat Reading client: shelf, notebook, highlights, store search, statistics and a local SQLite highlight index | etaf, etaf-ui, etaf-db, ebox |
 
 ## Requirements
 
