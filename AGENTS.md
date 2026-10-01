@@ -67,6 +67,39 @@ measured rather than guessed:
   (it accounts for display properties) rather than counting buffer lines or
   characters: `posn-at-point` on a line boundary easily reports the wrong row.
 
+## UI acceptance
+
+Every interaction a person can perform is verified in a real graphical session
+before a change is complete. Provider unit scenarios, batch rendering and
+screenshots taken for a README do not constitute application acceptance.
+
+- **Drive the controls, not the model API.** Send the documented keys through
+the command loop (`execute-kbd-macro`) or activate a control through ETAF's own
+focus (`etaf-focus` + RET). OS-level synthetic clicks do not reach Emacs text
+areas, so the native activation path stands in for a click and the scenario
+records which path each step used.
+- **Walk every affordance the buffer exposes**: list selection and paging, row
+activation, pane and tab switching, the search input, section navigation,
+refresh, export, open-in-browser (stub the external program), local-index build
+and query, theme switch, help, and close. An affordance without a scenario is an
+untested affordance.
+- **Verify the layout matrix, not one window**: every breakpoint the application
+defines (wide, medium and narrow for the current readers) plus a short height,
+asserting the resolved layout state and the content of each column, and
+reviewing the captures of the states that matter.
+- **Assertions and visual review are separate steps.** A green run certifies the
+behavior it checked, not the appearance: inspect the captures before claiming a
+layout renders as intended.
+- **Record every problem a pass finds in one list, fix them one by one with
+regression coverage, then re-run the affected scenarios.** That list belongs to
+the task, not to the repository, and run evidence (manifest, captures,
+recording) stays outside version control.
+
+Maintain the scenarios as `scripts/<application>-gui-scenarios.el` on the shared
+`emacs-gui-verifier` engine and run them from an existing frame of the size
+the matrix needs; the engine's action, checkpoint, evidence and timing contract
+lives in `etaf`'s manual under GUI verification tools.
+
 ## Retained Host updates
 
 A scoped update through ETAF's retained Host boundary (content or geometry) is
