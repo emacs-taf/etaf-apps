@@ -3,7 +3,7 @@
   "repositories": {
     "etaf-ncm": {
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-ncm.git",
-      "revision": "d39628cbfe0231a4ef1e3f00a295039ab73447af",
+      "revision": "4875b1125dc98bc525f589ef9d7c2bb6076c7f4d",
       "branch": "main"
     },
     "etaf-weread": {
