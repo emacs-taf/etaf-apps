@@ -70,21 +70,24 @@ measured rather than guessed:
 ## Retained Host updates
 
 A scoped update through ETAF's retained Host boundary (content or geometry) is
-cheap in what it touches and expensive in what it walks:
+cheap in what it touches and, with the provider's definite-flex-slot projection
+(`ebox` c2f1ee74), close to constant time:
 
-- It stays scoped: the update report reads `strategy owner-rerender`,
-  `dirty 1`, `patch 1` for a single changed node.
-- Its cost still scales with the view, not with the change: the same scoped
-  content update costs ~13 ms on an 8-row view and ~55 ms on the 30-row player
-  with its lyric panel (measured with `benchmark-run` on the mounted view).
-  Ebox's owner plan and surface plan/fragment walk the whole surface per commit.
-  Treat "scoped" as "correctly targeted", not as "constant time", and expect a
-  per-second scoped update to still cost tens of milliseconds on a full player.
-- Publishing out of band from ETAF's own pipeline is a trap: driving those
-  updates from an application made clicks and menu switches feel late, because
-  the interaction state only caught up on a later publication.  Verify an
-  interaction (a button, a sidebar item) after adding one, and prefer an
-  ordinary publication when the per-second cost is not the bottleneck.
+- It stays scoped: the update report reads `strategy owner-rerender` or
+  `span-patch`, `dirty 1`, `patch 1`, and now also carries a
+  `projection-kind` of `span-patch` or `owner-scoped` for the single changed
+  owner.
+- Its cost follows the changed subset instead of the view: the same scoped
+  content update costs ~4-5 ms on 8 to 60 rows of the player shape, where it
+  used to cost 13 ms on 8 rows and ~55 ms on the 30-row player with its lyric
+  panel (measured with `benchmark-run` on the mounted view).  A per-second
+  scoped update is therefore affordable; re-measure after a provider change.
+- Publishing out of band from ETAF's own pipeline is only safe while the
+  controlled state stays authoritative.  The player now drives its per-second
+  clock and meter through retained Hosts, and every interaction publishes its
+  local effect eagerly (the transport state flips before the reply), so the
+  interaction state never has to wait for a later publication.  Verify an
+  interaction (a button, a sidebar item) after adding or changing one.
 - A mount can precede the frame resize the window manager performs.  Ebox then
   records the window's width in its render state while the painted rows still
   belong to the mount-time viewport, so its own resize path sees nothing to do
