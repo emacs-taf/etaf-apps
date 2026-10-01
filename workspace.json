@@ -8,7 +8,7 @@
     },
     "etaf-weread": {
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-weread.git",
-      "revision": "fa9d3a47f5d1a6d56783136220685e385b85f243",
+      "revision": "5ff5ade5e8ef",
       "branch": "main"
     }
   }
