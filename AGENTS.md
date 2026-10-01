@@ -110,6 +110,12 @@ Maintain the scenarios as `scripts/<application>-gui-scenarios.el` on the shared
 the matrix needs; the engine's action, checkpoint, evidence and timing contract
 lives in `etaf`'s manual under GUI verification tools.
 
+## View width discipline
+
+- In ETAF/Ebox views, `width: stretch` fills its containing block, not remaining space. For remaining space, use `flex-basis (ch 0)` with `flex-grow 1`; never add `flex-shrink 0`, which overflows the container.
+- An over-wide canvas pushes centered blocks aside; clicking its right edge can horizontally scroll the overflow. Compare each line's `window-text-pixel-size` with `(window-body-width win t)`.
+- Indent Chinese paragraphs with ordinary spaces, never U+3000; a missing font glyph can render it as an underlined escape glyph.
+
 ## Retained Host updates
 
 A scoped update through ETAF's retained Host boundary (content or geometry) is
