@@ -83,6 +83,11 @@ application's tests already script the client and ship fixtures, so a mount
 paints a full frame immediately; a session against the real backend keeps the
 canvas blank until its service answers and cannot yield a checkpoint. Close the
 verification instance when the pass ends, including a failed one.
+- **Verify against the signed-in account before claiming completion.** Scripted
+scenarios are the deterministic regression gate, not the acceptance result. A
+change to an interactive surface is complete only after a pass on the real
+account with real data and audible playback through the real backend, covering
+every control the change touched. Demo-only evidence does not count.
 - **Walk every affordance the buffer exposes**: list selection and paging, row
 activation, pane and tab switching, the search input, section navigation,
 refresh, export, open-in-browser (stub the external program), local-index build
