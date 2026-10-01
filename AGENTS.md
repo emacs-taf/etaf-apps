@@ -161,6 +161,79 @@ cheap in what it touches and, with the provider's definite-flex-slot projection
   is pushed automatically after validation, laycat
   (`git@gitea.gklazycat.heiyu.space:...`) is published manually.
 
+## App design rules
+
+Distilled from the music (`etaf-ncm`) and reading (`etaf-weread`) applications:
+every rule below was a user requirement or a repeated defect. Read it before
+building UI, and check the list before claiming a UI change complete.
+
+**What done means**
+
+- Good-looking, modern and deliberate; a rough demo is a failure. The result is
+a pass on the real account with real content, driving every control the change
+touched, at every layout breakpoint (plus one short height).
+- Scripted scenarios and screenshots certify behavior, not appearance: inspect
+the captures as a separate step.
+
+**Layout and the vertical budget**
+
+- The frame holds exactly the window: nothing clipped at the bottom, no empty
+row left over. Budget in rows; never express vertical sizes as percentages.
+- No glyph may grow a line beyond the standard height: prefer CJK glyphs for
+icons, never bold a symbol glyph, never enlarge with `:font-size`; a grown row
+pushes the canvas past the window and crops the bottom.
+- The background reaches every edge, and key bars keep a padding row above and
+below.
+- A narrow width never truncates (a `$` marker means a width is wrong) and a
+resize reflows without stalling or scrambling boxes.
+
+**Components**
+
+- Interactive UI is extracted into shared components before an application
+consumes it: the application customizes props, it does not re-implement the
+control. Building applications is how the catalog grows.
+- Component defaults are modern and coherent: one icon set per application
+(sidebar and bars alike) with uniform metrics that never grow the line height,
+and theme tokens for spacing, states and emphasis.
+- Hierarchy comes from colour, weight and spacing, not from small type.
+- Applications use ETAF's public API only; a lower-level need becomes an ETAF
+API first, then the application consumes that.
+
+**Interaction**
+
+- Pointer shape follows the control's function (click, drag, resize) and is
+bound by the component, not set per application.
+- Hover follows the pointer fluidly, and the selected row highlights one text
+row rather than a block.
+- One press acts: clicks and double clicks never need repeating, and state
+changes (playback, favourite, selection, pane switch) land immediately.
+- Dragging is immediate and lands where released; sliders show a handle and
+which part is filled, and the printed value matches the visual one.
+- Users never see an internal error; an interaction error is handled where it
+arises.
+
+**Performance**
+
+- A face switch replaces a region, not the frame: cache the data and refresh it
+in the background so network latency stays out of the interaction.
+- Long lists page or scroll and never show only the first screen.
+- Media and UI stay in step: lyrics follow the line being sung, artwork paints.
+
+**Product logic**
+
+- Follow the native client's logic: "play all" queues every track, a playlist
+opens its contents instead of playing, "another batch" reloads, and a group
+header keeps a gap from its first item.
+
+**Process**
+
+- Test in the user's own configuration, reuse one instance and close it after.
+- Capture per application or window, never by focus.
+- Fix the framework first when the defect is there, then re-verify it through
+the application.
+- Unrelated work goes to a background subagent, and a handoff lists every open
+requirement.
+
 ## Documentation
 
 - [Application and integration contract](docs/architecture.zh-CN.md)
