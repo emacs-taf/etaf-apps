@@ -66,10 +66,12 @@
 ## 当前状态与缺口
 
 已实现的应用是 etaf-ncm（网易云音乐客户端）、etaf-weread（微信读书客户端）、
-etaf-md-preview（Markdown 阅读视图）与 etaf-reader（本地电子书阅读器）。etaf-weread 覆盖书架、
+etaf-md-preview（Markdown 阅读视图）、etaf-reader（本地电子书阅读器）与 etaf-rss（RSS 阅读器）。etaf-weread 覆盖书架、
 笔记本、书籍详情与目录、划线与想法、书城搜索、阅读统计、笔记导出，并通过 etaf-db 建立
 本地 SQLite 划线索引供离线检索；etaf-md-preview 把本地 Markdown 渲染为居中阅读栏，
 覆盖表格、提示块、代码、脚注与媒体卡片；etaf-reader 扫描本地 EPUB/TXT/Markdown/HTML/
 FB2/PDF 文件，经 ebook-parse 技能导入 etaf-db，提供翻页与滚动阅读、鼠标或键盘选中标注与
-想法、目录、笔记、书内搜索与按书记录的阅读进度。尚未实现的部分：后续应用清单未确定；应用级性能基准
-尚未建立，因此本仓库目前不提供性能门槛。
+想法、目录、笔记、书内搜索与按书记录的阅读进度；etaf-rss 订阅 RSS 2.0/Atom/JSON Feed，
+本地 JSON 存储加保留策略，提供全部/未读/收藏与按订阅、文件夹的列表、正文阅读、搜索、
+OPML 导入导出与后台条件刷新。尚未实现的部分：后续应用清单未确定；应用级性能基准
+已在 etaf-rss 的 benchmarks/performance-scenarios.el 登记交互场景，但尚无跨应用门槛。

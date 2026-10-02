@@ -6,5 +6,9 @@
   "etaf-weread": {
     "entry": "etaf-weread",
     "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-weread.git"
+  },
+  "etaf-rss": {
+    "entry": "etaf-rss",
+    "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-rss.git"
   }
 }

@@ -20,6 +20,11 @@
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-reader.git",
       "revision": "6861f9668a4b0794e4f046177562a69902459517",
       "branch": "main"
+    },
+    "etaf-rss": {
+      "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-rss.git",
+      "revision": "5a12fbf839c6265f2c85699bba58e1542c1e7ec7",
+      "branch": "main"
     }
   }
 }
