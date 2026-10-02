@@ -184,9 +184,16 @@ the captures as a separate step.
 
 - The frame holds exactly the window: nothing clipped at the bottom, no empty
 row left over. Budget in rows; never express vertical sizes as percentages.
-- No glyph may grow a line beyond the standard height: prefer CJK glyphs for
-icons, never bold a symbol glyph, never enlarge with `:font-size`; a grown row
-pushes the canvas past the window and crops the bottom.
+- No glyph may grow a line beyond the budgeted row height.  Navigation uses
+the shared SVG icon set (one set per application, uniform metrics); never bold
+an icon glyph.  A larger reading font is allowed only where the model also
+recomputes the row budget and the canvas line count (`etaf-weread`'s reading
+font), never as an inline `:font-size` on a row that keeps its old budget.
+- An active or selected state is carried by colour, surface, weight and icon
+colour, never by a prefix glyph.  A `* `-style marker changes the label's
+width and shifts the whole row or tab strip on every switch; the observable
+criterion is that the row's text is byte-identical before and after the state
+change.
 - The background reaches every edge, and key bars keep a padding row above and
 below.
 - A narrow width never truncates (a `$` marker means a width is wrong) and a
