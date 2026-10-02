@@ -2,6 +2,7 @@
 /etaf-ncm/
 /etaf-weread/
 /etaf-md-preview/
+/etaf-reader/
 
 *.pyc
 __pycache__/
