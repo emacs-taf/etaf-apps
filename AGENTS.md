@@ -6,7 +6,8 @@ this directory, ignored by this repository and committed from its own checkout.
 
 ## Layout and providers
 
-- Applications live at `./<name>` (`etaf-ncm` today). Their framework providers
+- Applications live at `./<name>` (`etaf-ncm`, `etaf-weread` and `etaf-md-preview`
+  today). Their framework providers
   (`etaf`, `etaf-ui`, `ebox`, `ecss`) live one directory further up in the
   `emacs-taf` workspace checkout: `../../etaf`, `../../etaf-ui`, `../../ebox`,
   `../../ecss`. A standalone clone instead keeps the providers beside the application.

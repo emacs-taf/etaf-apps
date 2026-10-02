@@ -1,6 +1,7 @@
 # Independent application repositories; add each new one here.
 /etaf-ncm/
 /etaf-weread/
+/etaf-md-preview/
 
 *.pyc
 __pycache__/

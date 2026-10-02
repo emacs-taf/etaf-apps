@@ -9,6 +9,7 @@ follow.
 | --- | --- | --- |
 | [etaf-ncm](https://gitea.vhkd.top/geekinney/etaf-ncm) | NetEase Cloud Music player: library browsing, playback control, lyrics and queue | etaf, etaf-ui, ebox |
 | [etaf-weread](https://gitea.vhkd.top/geekinney/etaf-weread) | WeChat Reading client: shelf, notebook, highlights, store search, statistics and a local SQLite highlight index | etaf, etaf-ui, etaf-db, ebox |
+| [etaf-md-preview](https://gitea.vhkd.top/geekinney/etaf-md-preview) | Markdown reading view: centered measure, headings, tables, callouts, code, footnotes and media cards | etaf, etaf-ui, ebox |
 
 ## Requirements
 

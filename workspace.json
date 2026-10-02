@@ -10,6 +10,11 @@
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-weread.git",
       "revision": "f0958463ad3c16c055dc6d370620bdfbcb09c7ae",
       "branch": "main"
+    },
+    "etaf-md-preview": {
+      "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-md-preview.git",
+      "revision": "f9df50a14c7b555616d39a6581170085cecfbc66",
+      "branch": "main"
     }
   }
 }
