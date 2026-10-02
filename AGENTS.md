@@ -6,8 +6,8 @@ this directory, ignored by this repository and committed from its own checkout.
 
 ## Layout and providers
 
-- Applications live at `./<name>` (`etaf-ncm`, `etaf-weread` and `etaf-md-preview`
-  today). Their framework providers
+- Applications live at `./<name>` (`etaf-ncm`, `etaf-weread`, `etaf-md-preview`
+  and `etaf-reader` today). Their framework providers
   (`etaf`, `etaf-ui`, `ebox`, `ecss`) live one directory further up in the
   `emacs-taf` workspace checkout: `../../etaf`, `../../etaf-ui`, `../../ebox`,
   `../../ecss`. A standalone clone instead keeps the providers beside the application.
@@ -122,6 +122,31 @@ lives in `etaf`'s manual under GUI verification tools.
 - An over-wide canvas pushes centered blocks aside; clicking its right edge can horizontally scroll the overflow. Compare each line's `window-text-pixel-size` with `(window-body-width win t)`.
 - Indent Chinese paragraphs with ordinary spaces, never U+3000; a missing font glyph can render it as an underlined escape glyph.
 
+## Provider integration pitfalls
+
+All of these cost real debugging time while building `etaf-reader`; check them
+before writing a backend call or a wrapping view.
+
+- `call-process` takes a *file name* for stderr, never a buffer.  Pass
+  `(list OUTPUT-BUFFER STDERR-FILE)` plus `make-temp-file`, read the file back
+  on failure, and delete it in `unwind-protect`.  A buffer there signals
+  `wrong-type-argument stringp` from inside the call.
+- `json-parse-string` signals `json-trailing-content` on a trailing newline.
+  Trim a CLI's stdout first (`string-trim`); `json-parse-buffer` on the whole
+  buffer is the alternative.
+- `json-encode` guesses alist versus plist from the first element, so a *list
+  of plists* encodes as an alist (`{"type":["p",...]}`).  Store nested values
+  through a small recursive encoder that always keeps keyword-keyed plists as
+  JSON objects, then parse them back with `:object-type 'plist`.
+- In a `etaf-view` body, a helper call in a child position must be wrapped:
+  `(expr (my-view ...))`.  A bare call is treated as an Elisp expression and
+  rejected with "must be inside (expr FORM)".
+- When a view wraps text itself, count every prefix (indent, quote bar) in the
+  wrap width, not just the source text.  `ch` and `char-width` agree for CJK
+  and ASCII, so an exactly full line is fine; leaving one cell of slack in the
+  column width absorbs sub-cell rounding.  Without this the column clips the
+  tail of the line and the text silently loses characters.
+
 ## Retained Host updates
 
 A scoped update through ETAF's retained Host boundary (content or geometry) is
@@ -164,8 +189,17 @@ cheap in what it touches and, with the provider's definite-flex-slot projection
 - Keep the application list here, in `.gitignore`, in `scripts/api-workspace.json`
   and in `workspace.json` consistent when adding or removing an application.
 - Publish with the shared Jujutsu workflow: aliyun (`https://gitea.vhkd.top/...`)
-  is pushed automatically after validation, laycat
-  (`git@gitea.gklazycat.heiyu.space:...`) is published manually.
+  is pushed automatically after validation; push laycat
+  (`git@gitea.gklazycat.heiyu.space:...`) at the same checkpoints once its
+  repository exists.
+- A remote repository for a new application must exist before its first push.
+  Create it yourself through the host API instead of waiting for the user:
+  `git credential fill` with `host=gitea.gklazycat.heiyu.space` supplies the
+  laycat credentials, `host=gitea.vhkd.top` the aliyun ones, and
+  `POST /api/v1/user/repos {"name":...,"private":false,"auto_init":false,
+  "default_branch":"main"}` creates the repository.  A refused push means the
+  repository is missing or the credentials are wrong; report it instead of
+  retrying blindly.
 
 ## App design rules
 
