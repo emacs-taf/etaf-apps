@@ -147,6 +147,40 @@ before writing a backend call or a wrapping view.
   column width absorbs sub-cell rounding.  Without this the column clips the
   tail of the line and the text silently loses characters.
 
+## Runtime-only defects
+
+Only a real session against real data exposes these; batch scenarios and
+scripted demos are green while they are broken.  They are cheap to avoid at
+write time and expensive to find:
+
+- A View or mount path must not touch storage, create Data Controllers or call
+  the network: ETAF rejects it as `etaf-render-side-effect-error`.  Views read
+  refs and cached values; data access happens before mounting or inside
+  commands and events.
+- The renderer's minor-mode map owns `SPC`, `S-SPC`, `DEL`, `C-v`, `M-v`,
+  `RET`, wheel and `n`/`q`.  An application that replaces them installs a
+  buffer-local `emulation-mode-map-alists` entry whose key is the
+  buffer-local session variable (a wrong or void key silently disables the
+  whole map); `RET` dispatches between the application action and
+  `etaf-activate` so focused controls keep working.
+- `(setf (plist-get plist :key) value)` only writes in place when the key
+  exists; on a missing key it rebinds the local variable and the caller's
+  plist keeps no change.  Create every hot field with the session, or use
+  `plist-put`.
+- A hand-written `'(.body . nil)` reads as the symbol `.body`, not
+  `(body . nil)`, and every `eq` comparison against it silently fails.
+  Verify such literals at runtime (`eac def`, a batch `eq` probe).
+- Retained Host updates take a **symbol** ref (a string signals "Unknown
+  committed Host"), the node needs both `:ref` and `:id`, and one missing
+  target rejects the whole batch before applying anything: align the batch
+  with the published structure or catch `etaf-runtime-error` and republish.
+
+A write to a reactive source republishes the whole view at 200-500 ms; move
+high-frequency state into plain fields and patch its Hosts through
+`etaf-runtime-update-host-content(s)`, with a tracked `:revision` source as the
+explicit republish trigger.  Measure "key press to repaint", never headless
+model time.
+
 ## Retained Host updates
 
 A scoped update through ETAF's retained Host boundary (content or geometry) is
