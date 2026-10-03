@@ -23,7 +23,7 @@
     },
     "etaf-ascii-video": {
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-ascii-video.git",
-      "revision": "ba1bfb60af6403e865f27722699e5032121132d4",
+      "revision": "5b131dac0e575c73d59db546ba43c4079b10a63d",
       "branch": "main"
     },
     "etaf-rss": {
