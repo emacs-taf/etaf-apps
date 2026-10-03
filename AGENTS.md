@@ -279,6 +279,11 @@ and theme tokens for spacing, states and emphasis.
 - Hierarchy comes from colour, weight and spacing, not from small type.
 - Applications use ETAF's public API only; a lower-level need becomes an ETAF
 API first, then the application consumes that.
+- `column` and `row` are simple-axis layouts that accept only `:item-gap` and
+`:cross-align`; a child carrying `:flex-grow`, `:flex-shrink` or `:flex-basis`
+needs a `flex` parent.  Write such containers, and every conditional or
+list-rendered container, as `flex` with an explicit `:flex-direction` and
+`:gap`.
 
 **Interaction**
 
@@ -299,6 +304,15 @@ arises.
 in the background so network latency stays out of the interaction.
 - Long lists page or scroll and never show only the first screen.
 - Media and UI stay in step: lyrics follow the line being sung, artwork paints.
+- A state write repaints only the Components that read it: split panes into
+child Components (sidebar, list, reading pane, footer) that read their own
+state, and key list rows, so a selection move reports the changed owners in
+Ebox's commit telemetry (`dirty-count 2` in etaf-rss) instead of re-rendering
+the whole application.
+- Scoping the application is necessary but not sufficient: every write still
+pays a full-root Ebox commit, so read the changed owners and the commit phases
+together before claiming an interaction budget, and measure with the workspace
+manual's Ebox commit recipe instead of a stopwatch.
 
 **Product logic**
 
