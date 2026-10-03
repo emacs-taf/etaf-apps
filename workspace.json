@@ -18,7 +18,7 @@
     },
     "etaf-reader": {
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-reader.git",
-      "revision": "6dec808e86e220d093524722afedbdde7b8e4f70",
+      "revision": "b053798bb921b600f1ecf93ce50ccebfcade59df",
       "branch": "main"
     },
     "etaf-rss": {
