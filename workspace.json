@@ -21,6 +21,11 @@
       "revision": "2c93265c77d40dd1c400666f65c172b7fe376683",
       "branch": "main"
     },
+    "etaf-ascii-video": {
+      "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-ascii-video.git",
+      "revision": "23e720c43eaa859cc83f7185756d3a2efbb09ebe",
+      "branch": "main"
+    },
     "etaf-rss": {
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-rss.git",
       "revision": "5a12fbf839c6265f2c85699bba58e1542c1e7ec7",

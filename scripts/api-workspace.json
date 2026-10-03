@@ -10,5 +10,9 @@
   "etaf-rss": {
     "entry": "etaf-rss",
     "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-rss.git"
+  },
+  "etaf-ascii-video": {
+    "entry": "etaf-ascii-video",
+    "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-ascii-video.git"
   }
 }
