@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := check
 .NOTPARALLEL:
 EMACS ?= emacs
-MODULE_DIRS := etaf-ncm etaf-weread etaf-md-preview etaf-reader etaf-rss etaf-pi
+MODULE_DIRS := etaf-ncm etaf-weread etaf-md-preview etaf-reader etaf-rss etaf-pi etaf-telega
 
 .PHONY: structure-check setup-hooks compile test check api-check clean
 

@@ -5,6 +5,7 @@
 /etaf-rss/
 /etaf-reader/
 /etaf-pi/
+/etaf-telega/
 
 *.pyc
 __pycache__/
