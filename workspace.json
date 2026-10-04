@@ -38,7 +38,7 @@
     },
     "etaf-video-player": {
       "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-video-player.git",
-      "revision": "379574b7d215d6ea05109d4a18d5e680fe8ea899",
+      "revision": "1870091b9445c9a3055d25c25229b653d52b9fa4",
       "branch": "main"
     }
   }
