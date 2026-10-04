@@ -33,7 +33,7 @@
     },
     "etaf-telega": {
       "url": "https://forgejo.vhkd.top/geekinney/etaf-telega.git",
-      "revision": "5114384a5a1f836cec994c779fb87b9ac402fcf4",
+      "revision": "b3702135f156dc49489ced5a56ef4470829b15f0",
       "branch": "main"
     },
     "etaf-rss": {
