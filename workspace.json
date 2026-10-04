@@ -28,7 +28,7 @@
     },
     "etaf-pi": {
       "url": "https://forgejo.vhkd.top/pi-hub/etaf-pi.git",
-      "revision": "b554a446a247d83d7498fa8b802f8fe96b667726",
+      "revision": "913670f58159b27deebe48f5848e0b710a4b1f07",
       "branch": "main"
     },
     "etaf-rss": {
