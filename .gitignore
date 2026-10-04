@@ -4,6 +4,7 @@
 /etaf-md-preview/
 /etaf-rss/
 /etaf-reader/
+/etaf-pi/
 
 *.pyc
 __pycache__/

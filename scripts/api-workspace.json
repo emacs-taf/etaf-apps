@@ -7,6 +7,10 @@
     "entry": "etaf-weread",
     "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-weread.git"
   },
+  "etaf-pi": {
+    "entry": "etaf-pi",
+    "url": "https://forgejo.vhkd.top/pi-hub/etaf-pi.git"
+  },
   "etaf-rss": {
     "entry": "etaf-rss",
     "url": "git@gitea.gklazycat.heiyu.space:geekinney/etaf-rss.git"
