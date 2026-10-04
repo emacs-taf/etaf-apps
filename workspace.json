@@ -27,8 +27,13 @@
       "branch": "main"
     },
     "etaf-pi": {
-      "url": "https://forgejo.vhkd.top/pi-hub/etaf-pi.git",
-      "revision": "913670f58159b27deebe48f5848e0b710a4b1f07",
+      "url": "https://forgejo.vhkd.top/geekinney/etaf-pi.git",
+      "revision": "806b8a3d8a3a104cc81380dd897a215e1a98a331",
+      "branch": "main"
+    },
+    "etaf-telega": {
+      "url": "https://forgejo.vhkd.top/geekinney/etaf-telega.git",
+      "revision": "47af287ea9b4e09aa857bb9e1c5d637d786802c4",
       "branch": "main"
     },
     "etaf-rss": {

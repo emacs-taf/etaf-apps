@@ -9,7 +9,11 @@
   },
   "etaf-pi": {
     "entry": "etaf-pi",
-    "url": "https://forgejo.vhkd.top/pi-hub/etaf-pi.git"
+    "url": "https://forgejo.vhkd.top/geekinney/etaf-pi.git"
+  },
+  "etaf-telega": {
+    "entry": "etaf-telega",
+    "url": "https://forgejo.vhkd.top/geekinney/etaf-telega.git"
   },
   "etaf-rss": {
     "entry": "etaf-rss",

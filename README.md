@@ -12,7 +12,8 @@ follow.
 | [etaf-md-preview](https://gitea.vhkd.top/geekinney/etaf-md-preview) | Markdown reading view: centered measure, headings, tables, callouts, code, footnotes and media cards | etaf, etaf-ui, ebox |
 | [etaf-rss](https://gitea.vhkd.top/geekinney/etaf-rss) | RSS reader: subscriptions, folders, unread and starred scopes, reading pane, search and OPML | etaf, etaf-ui, ebox |
 | [etaf-reader](https://gitea.vhkd.top/geekinney/etaf-reader) | Local ebook reader: library scan, EPUB/TXT/Markdown/HTML/FB2/PDF import, paged and scrolling reading, annotations and progress | etaf, etaf-ui, etaf-db, ebox |
-| [etaf-pi](https://forgejo.vhkd.top/pi-hub/etaf-pi) | Native Pi agent client: streamed conversations, tool output, session recovery and multiline input | etaf, etaf-ui, ebox |
+| [etaf-pi](https://forgejo.vhkd.top/geekinney/etaf-pi) | Native Pi agent client: streamed conversations, tool output, session recovery and multiline input | etaf, etaf-ui, ebox |
+| [etaf-telega](https://forgejo.vhkd.top/geekinney/etaf-telega) | Telegram client on Telega's TDLib backend: chats, live message stream, in-place composer and message actions | etaf, etaf-ui, ebox |
 
 ## Requirements
 
