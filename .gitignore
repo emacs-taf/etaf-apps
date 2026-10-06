@@ -6,6 +6,9 @@
 /etaf-reader/
 /etaf-pi/
 /etaf-telega/
+/etaf-algo-lab/
+/etaf-ascii-video/
+/etaf-video-player/
 
 *.pyc
 __pycache__/
