@@ -7,13 +7,13 @@ follow.
 
 | Application | Responsibility | Framework dependencies |
 | --- | --- | --- |
-| [etaf-ncm](https://gitea.vhkd.top/geekinney/etaf-ncm) | NetEase Cloud Music player: library browsing, playback control, lyrics and queue | etaf, etaf-ui, ebox |
-| [etaf-weread](https://gitea.vhkd.top/geekinney/etaf-weread) | WeChat Reading client: shelf, notebook, highlights, store search, statistics and a local SQLite highlight index | etaf, etaf-ui, etaf-db, ebox |
-| [etaf-md-preview](https://gitea.vhkd.top/geekinney/etaf-md-preview) | Markdown reading view: centered measure, headings, tables, callouts, code, footnotes and media cards | etaf, etaf-ui, ebox |
-| [etaf-rss](https://gitea.vhkd.top/geekinney/etaf-rss) | RSS reader: subscriptions, folders, unread and starred scopes, reading pane, search and OPML | etaf, etaf-ui, ebox |
-| [etaf-reader](https://gitea.vhkd.top/geekinney/etaf-reader) | Local ebook reader: library scan, EPUB/TXT/Markdown/HTML/FB2/PDF import, paged and scrolling reading, annotations and progress | etaf, etaf-ui, etaf-db, ebox |
-| [etaf-pi](https://forgejo.vhkd.top/geekinney/etaf-pi) | Native Pi agent client: streamed conversations, tool output, session recovery and multiline input | etaf, etaf-ui, ebox |
-| [etaf-telega](https://forgejo.vhkd.top/geekinney/etaf-telega) | Telegram client on Telega's TDLib backend: chats, live message stream, in-place composer and message actions | etaf, etaf-ui, ebox |
+| [etaf-ncm](https://forgejo.vhkd.top/emacs-taf/etaf-ncm) | NetEase Cloud Music player: library browsing, playback control, lyrics and queue | etaf, etaf-ui, ebox |
+| [etaf-weread](https://forgejo.vhkd.top/emacs-taf/etaf-weread) | WeChat Reading client: shelf, notebook, highlights, store search, statistics and a local SQLite highlight index | etaf, etaf-ui, etaf-db, ebox |
+| [etaf-md-preview](https://forgejo.vhkd.top/emacs-taf/etaf-md-preview) | Markdown reading view: centered measure, headings, tables, callouts, code, footnotes and media cards | etaf, etaf-ui, ebox |
+| [etaf-rss](https://forgejo.vhkd.top/emacs-taf/etaf-rss) | RSS reader: subscriptions, folders, unread and starred scopes, reading pane, search and OPML | etaf, etaf-ui, ebox |
+| [etaf-reader](https://forgejo.vhkd.top/emacs-taf/etaf-reader) | Local ebook reader: library scan, EPUB/TXT/Markdown/HTML/FB2/PDF import, paged and scrolling reading, annotations and progress | etaf, etaf-ui, etaf-db, ebox |
+| [etaf-pi](https://forgejo.vhkd.top/emacs-taf/etaf-pi) | Native Pi agent client: streamed conversations, tool output, session recovery and multiline input | etaf, etaf-ui, ebox |
+| [etaf-telega](https://forgejo.vhkd.top/emacs-taf/etaf-telega) | Telegram client on Telega's TDLib backend: chats, live message stream, in-place composer and message actions | etaf, etaf-ui, ebox |
 
 ## Requirements
 
@@ -29,9 +29,9 @@ and can fetch them for a standalone checkout.
 ## Setup
 
 ```sh
-git clone -o laycat git@gitea.gklazycat.heiyu.space:geekinney/etaf-apps.git
+git clone -o laycat git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-apps.git
 cd etaf-apps
-git clone -o laycat git@gitea.gklazycat.heiyu.space:geekinney/etaf-ncm.git
+git clone -o laycat git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ncm.git
 make setup-hooks
 ```
 
