@@ -1,7 +1,8 @@
 .DEFAULT_GOAL := check
 .NOTPARALLEL:
 EMACS ?= emacs
-MODULE_DIRS := etaf-ncm etaf-weread etaf-md-preview etaf-reader etaf-rss etaf-pi etaf-telega
+# Single source: the application list comes from the workspace registry.
+MODULE_DIRS := $(shell python3 -c 'import json; print(" ".join(json.load(open("workspace.json"))["repositories"]))')
 
 .PHONY: structure-check setup-hooks compile test check api-check clean
 
