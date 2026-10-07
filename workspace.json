@@ -45,6 +45,11 @@
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-video-player.git",
       "revision": "6a410a72e2b08ab2f5889b4b4cba4a88cf7fb4ad",
       "branch": "main"
+    },
+    "etaf-algo-lab": {
+      "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-algo-lab.git",
+      "revision": "a13c7891e79dd02e9e32b450676a9280f8c4f13e",
+      "branch": "main"
     }
   }
 }

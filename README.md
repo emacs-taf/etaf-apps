@@ -14,6 +14,9 @@ follow.
 | [etaf-reader](https://forgejo.vhkd.top/emacs-taf/etaf-reader) | Local ebook reader: library scan, EPUB/TXT/Markdown/HTML/FB2/PDF import, paged and scrolling reading, annotations and progress | etaf, etaf-ui, etaf-db, ebox |
 | [etaf-pi](https://forgejo.vhkd.top/emacs-taf/etaf-pi) | Native Pi agent client: streamed conversations, tool output, session recovery and multiline input | etaf, etaf-ui, ebox |
 | [etaf-telega](https://forgejo.vhkd.top/emacs-taf/etaf-telega) | Telegram client on Telega's TDLib backend: chats, live message stream, in-place composer and message actions | etaf, etaf-ui, ebox |
+| [etaf-ascii-video](https://forgejo.vhkd.top/emacs-taf/etaf-ascii-video) | Video and HTTP(S) streams inside an Emacs buffer as pure characters | etaf, etaf-ui, ebox |
+| [etaf-video-player](https://forgejo.vhkd.top/emacs-taf/etaf-video-player) | Local video and streams as sharp image frames with sound | etaf, etaf-ui, ebox |
+| [etaf-algo-lab](https://forgejo.vhkd.top/emacs-taf/etaf-algo-lab) | Learn algorithms by watching, steering and comparing them inside Emacs | etaf, etaf-ui, ebox |
 
 ## Requirements
 
