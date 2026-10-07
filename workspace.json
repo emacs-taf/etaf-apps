@@ -3,47 +3,47 @@
   "repositories": {
     "etaf-ncm": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ncm.git",
-      "revision": "b2640f285b8c6f72e74f332c436f7b79ca75f3df",
+      "revision": "951598c796630e38e6c86bd3ae47519757dc5bbd",
       "branch": "main"
     },
     "etaf-weread": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-weread.git",
-      "revision": "bf7516a62c02f6abd9c74a9045a4390f89267e72",
+      "revision": "5a8ccd0f3f6b835e84d98e2ced3abb9cd0735598",
       "branch": "main"
     },
     "etaf-md-preview": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-md-preview.git",
-      "revision": "ea047af1a541da7fc8abf2bcc4a74e5a82f16e92",
+      "revision": "e4ed3834f0fcf97ed7a0c9a4b95a83d14f5f0f48",
       "branch": "main"
     },
     "etaf-reader": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-reader.git",
-      "revision": "2c93265c77d40dd1c400666f65c172b7fe376683",
+      "revision": "c1d0abd75cee61774029051edac6ea9add83b920",
       "branch": "main"
     },
     "etaf-ascii-video": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ascii-video.git",
-      "revision": "a7e5125459c483405b462aa0057f6c32d5c78b6d",
+      "revision": "ffa1a4f8d8175fdb124a4fe6858dc96cfe07e281",
       "branch": "main"
     },
     "etaf-pi": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-pi.git",
-      "revision": "806b8a3d8a3a104cc81380dd897a215e1a98a331",
+      "revision": "57375c5e423862eacf969b20f8fef853f4ed0815",
       "branch": "main"
     },
     "etaf-telega": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-telega.git",
-      "revision": "31d9b2fd484e31416c443505e6ef61c605cb06bd",
+      "revision": "27fb921a0a058f23bebc2e1387a77f4ca90e70ad",
       "branch": "main"
     },
     "etaf-rss": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-rss.git",
-      "revision": "5a12fbf839c6265f2c85699bba58e1542c1e7ec7",
+      "revision": "f96c98a682e767d71b24211bf9f19f8ae2bbd68a",
       "branch": "main"
     },
     "etaf-video-player": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-video-player.git",
-      "revision": "6f59736df51299a4e1f51f8b9625ecfd4e4c7ed3",
+      "revision": "6a410a72e2b08ab2f5889b4b4cba4a88cf7fb4ad",
       "branch": "main"
     }
   }
