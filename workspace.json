@@ -3,27 +3,27 @@
   "repositories": {
     "etaf-ncm": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ncm.git",
-      "revision": "5388dce09d9a4d5ee814d184e427c496fc4af7a3",
+      "revision": "b7c6ea2075be5aca8e378c9c08f9a27eb81d8b79",
       "branch": "main"
     },
     "etaf-weread": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-weread.git",
-      "revision": "4774f9781b94e8671a4bacdaaa16565b302c02a1",
+      "revision": "e1b7361576ae7b8df0625d91b47de91a758740d0",
       "branch": "main"
     },
     "etaf-md-preview": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-md-preview.git",
-      "revision": "ad4ff27552ed57ad34570706497a9e253c663537",
+      "revision": "648a1c8993797ffdc8dd53da262b9156b921d230",
       "branch": "main"
     },
     "etaf-reader": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-reader.git",
-      "revision": "c1d0abd75cee61774029051edac6ea9add83b920",
+      "revision": "95297e2246089d10d2bb6c0d9954933795aee885",
       "branch": "main"
     },
     "etaf-ascii-video": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ascii-video.git",
-      "revision": "ffa1a4f8d8175fdb124a4fe6858dc96cfe07e281",
+      "revision": "5fcf8ae55a2c173f1effc77f1b1becc959d133bd",
       "branch": "main"
     },
     "etaf-pi": {
@@ -33,12 +33,12 @@
     },
     "etaf-telega": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-telega.git",
-      "revision": "27fb921a0a058f23bebc2e1387a77f4ca90e70ad",
+      "revision": "5a6faef4d888305894cc9b49d4a7f35245c32b63",
       "branch": "main"
     },
     "etaf-rss": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-rss.git",
-      "revision": "c15ff8bfcdd0f333fa0086bd23174f377be4f85a",
+      "revision": "cf281cead12cd6590cffc2f6bff8a3ee07ed3e7b",
       "branch": "main"
     },
     "etaf-video-player": {
@@ -48,7 +48,7 @@
     },
     "etaf-algo-lab": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-algo-lab.git",
-      "revision": "fec1d38ba768fad76b871b15a1810f85ffa4f6bf",
+      "revision": "14f3476b68f9739e0e0f4b5289af8f4e01ca81eb",
       "branch": "main"
     }
   }
