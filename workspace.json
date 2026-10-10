@@ -8,7 +8,7 @@
     },
     "etaf-weread": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-weread.git",
-      "revision": "e1b7361576ae7b8df0625d91b47de91a758740d0",
+      "revision": "aa54b52c160f7f6e102d48199fe31f9c8250ddbe",
       "branch": "main"
     },
     "etaf-md-preview": {
@@ -38,7 +38,7 @@
     },
     "etaf-rss": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-rss.git",
-      "revision": "cf281cead12cd6590cffc2f6bff8a3ee07ed3e7b",
+      "revision": "a78d21143fbeb868071e6f5cb7a3afcfe66bc40c",
       "branch": "main"
     },
     "etaf-video-player": {
