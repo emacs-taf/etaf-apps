@@ -33,7 +33,7 @@
     },
     "etaf-telega": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-telega.git",
-      "revision": "c5e77bcc940b7e13715c4726936ab1c1fa15ba9b",
+      "revision": "49c6ebc01cd0a1cd208036f7f8165e26301abed7",
       "branch": "main"
     },
     "etaf-rss": {
