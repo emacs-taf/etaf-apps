@@ -3,12 +3,12 @@
   "repositories": {
     "etaf-ncm": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ncm.git",
-      "revision": "fde75e95b3be0630f11d69fee2f73d530bc86a73",
+      "revision": "e6a0c2cddbec82a499bafdcdbe2f4c1239c2ba13",
       "branch": "main"
     },
     "etaf-weread": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-weread.git",
-      "revision": "aa54b52c160f7f6e102d48199fe31f9c8250ddbe",
+      "revision": "4bc7021acd4e41498ff4d82fff9f64458fa4c17c",
       "branch": "main"
     },
     "etaf-md-preview": {
@@ -18,17 +18,17 @@
     },
     "etaf-reader": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-reader.git",
-      "revision": "95297e2246089d10d2bb6c0d9954933795aee885",
+      "revision": "317282fe14060cc63babe66e483ff5bd02e13dc5",
       "branch": "main"
     },
     "etaf-ascii-video": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ascii-video.git",
-      "revision": "5fcf8ae55a2c173f1effc77f1b1becc959d133bd",
+      "revision": "3c1364c32f4d10aaebbbdea8855975dc9c53964e",
       "branch": "main"
     },
     "etaf-pi": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-pi.git",
-      "revision": "57375c5e423862eacf969b20f8fef853f4ed0815",
+      "revision": "2a6dfde3cd7ab21b77207f9c2f25e3578fcfa1d5",
       "branch": "main"
     },
     "etaf-telega": {
@@ -38,12 +38,12 @@
     },
     "etaf-rss": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-rss.git",
-      "revision": "a78d21143fbeb868071e6f5cb7a3afcfe66bc40c",
+      "revision": "4a8b4aa706a772f3d7f5bca1396efa0ee528c591",
       "branch": "main"
     },
     "etaf-video-player": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-video-player.git",
-      "revision": "c38f955161e5d785d5da7ac5db72f6beef5cd4f1",
+      "revision": "79c8a62982c1f3a2d4787f331682425d225b2b7a",
       "branch": "main"
     },
     "etaf-algo-lab": {
