@@ -3,32 +3,32 @@
   "repositories": {
     "etaf-ncm": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ncm.git",
-      "revision": "218612288eb76a86b0d79878b8add0118d4f291e",
+      "revision": "25b6b3bf444bc78240d9cfccbbe16f6f356f83e7",
       "branch": "main"
     },
     "etaf-weread": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-weread.git",
-      "revision": "9dc0ee7da3d8218d764b6e0a8e6cd8071daf8ce1",
+      "revision": "68d4375dc6a89f605058765d02fe3a5a816a79a8",
       "branch": "main"
     },
     "etaf-md-preview": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-md-preview.git",
-      "revision": "0581583eeae1c0577c21db3b344070b4d2995a38",
+      "revision": "ec0105841cd959426dfc7190234b84cef69c99a9",
       "branch": "main"
     },
     "etaf-reader": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-reader.git",
-      "revision": "169447c9a749f4e42c5a86f83bdc42df8775ae48",
+      "revision": "aee924d28eb33e15d91a2edb44ea6ff66d3494d5",
       "branch": "main"
     },
     "etaf-ascii-video": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ascii-video.git",
-      "revision": "6ee10e386ce7c33354bd7055eccae63282416638",
+      "revision": "be63329cbaf7698f208255f931cbdb23ea9ab93e",
       "branch": "main"
     },
     "etaf-pi": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-pi.git",
-      "revision": "ea46ae26059ef25823509ab12499223f061a79b7",
+      "revision": "c2c46d780c646bf3867124d6f07728eb69d2d05c",
       "branch": "main"
     },
     "etaf-telega": {
@@ -38,17 +38,17 @@
     },
     "etaf-rss": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-rss.git",
-      "revision": "1609a1e37c956b6862b63fc8334b53ef56451fdf",
+      "revision": "12e81a3eabfb4b00e2a29e556a25be141dc492e0",
       "branch": "main"
     },
     "etaf-video-player": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-video-player.git",
-      "revision": "232edf63356e41a1f2f55ff916119f447122a98d",
+      "revision": "2c137a05b99ee85533936e472b544863eb5c8525",
       "branch": "main"
     },
     "etaf-algo-lab": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-algo-lab.git",
-      "revision": "14f3476b68f9739e0e0f4b5289af8f4e01ca81eb",
+      "revision": "2a44ac6f1f02858a1c64d9e5b7d07ae7ce2b90a8",
       "branch": "main"
     }
   }
