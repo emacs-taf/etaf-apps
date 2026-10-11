@@ -13,7 +13,7 @@
     },
     "etaf-md-preview": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-md-preview.git",
-      "revision": "ec0105841cd959426dfc7190234b84cef69c99a9",
+      "revision": "65592f6e6b92c3da7713ed03ce7cb5ae66f56af8",
       "branch": "main"
     },
     "etaf-reader": {
@@ -33,7 +33,7 @@
     },
     "etaf-telega": {
       "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-telega.git",
-      "revision": "4634b03a5ad89d4b39ce4f808de3c6d4db3b823c",
+      "revision": "023c11b3779a272450d939604718f850c90d1ba2",
       "branch": "main"
     },
     "etaf-rss": {
