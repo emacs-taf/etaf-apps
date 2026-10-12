@@ -1,26 +1,26 @@
 {
   "etaf-ncm": {
     "entry": "etaf-ncm",
-    "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ncm.git"
+    "url": "https://github.com/emacs-taf/etaf-ncm.git"
   },
   "etaf-weread": {
     "entry": "etaf-weread",
-    "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-weread.git"
+    "url": "https://github.com/emacs-taf/etaf-weread.git"
   },
   "etaf-pi": {
     "entry": "etaf-pi",
-    "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-pi.git"
+    "url": "https://github.com/emacs-taf/etaf-pi.git"
   },
   "etaf-telega": {
     "entry": "etaf-telega",
-    "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-telega.git"
+    "url": "https://github.com/emacs-taf/etaf-telega.git"
   },
   "etaf-rss": {
     "entry": "etaf-rss",
-    "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-rss.git"
+    "url": "https://github.com/emacs-taf/etaf-rss.git"
   },
   "etaf-ascii-video": {
     "entry": "etaf-ascii-video",
-    "url": "git@gitea.gklazycat.heiyu.space:emacs-taf/etaf-ascii-video.git"
+    "url": "https://github.com/emacs-taf/etaf-ascii-video.git"
   }
 }

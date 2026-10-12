@@ -222,15 +222,17 @@ cheap in what it touches and, with the provider's definite-flex-slot projection
   evaluation reports here.
 - Keep the application list here, in `.gitignore`, in `scripts/api-workspace.json`
   and in `workspace.json` consistent when adding or removing an application.
-- Publish with the shared Jujutsu workflow: aliyun (`https://gitea.vhkd.top/...`)
-  is pushed automatically after validation; push laycat
-  (`git@gitea.gklazycat.heiyu.space:...`) at the same checkpoints once its
+- Publish with the shared Jujutsu workflow: `origin`
+  (`https://github.com/emacs-taf/...`) is the public home and is pushed with
+  `aliyun` (`https://forgejo.vhkd.top/...`) automatically after validation; push
+  laycat (`git@gitea.gklazycat.heiyu.space:...`) at the same checkpoints once its
   repository exists.
 - A remote repository for a new application must exist before its first push.
   Create it yourself through the host API instead of waiting for the user:
-  `git credential fill` with `host=gitea.gklazycat.heiyu.space` supplies the
-  laycat credentials, `host=gitea.vhkd.top` the aliyun ones, and
-  `POST /api/v1/user/repos {"name":...,"private":false,"auto_init":false,
+  `gh repo create emacs-taf/<name> --public` creates the GitHub origin;
+  on the mirrors, `git credential fill` with `host=gitea.vhkd.top` supplies the
+  aliyun credentials and `host=gitea.gklazycat.heiyu.space` the laycat ones, and
+  `POST /api/v1/orgs/emacs-taf/repos {"name":...,"private":false,"auto_init":false,
   "default_branch":"main"}` creates the repository.  A refused push means the
   repository is missing or the credentials are wrong; report it instead of
   retrying blindly.
