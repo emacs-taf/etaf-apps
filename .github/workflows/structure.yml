@@ -14,12 +14,12 @@ jobs:
             (cd "$module" && python3 scripts/check-api.py --root . --fetch-providers --providers-dir ../..)
           done
       - run: python3 scripts/check-repository.py
-      - name: Policy regression tests (workspace)
-        run: python3 -m unittest discover -s tests/tools -p 'test_*.py'
       - name: Install batch Emacs
         run: |
           sudo apt-get update
           sudo apt-get install -y emacs-nox
+      - name: Policy regression tests (workspace)
+        run: python3 -m unittest discover -s tests/tools -p 'test_*.py'
       - name: Verify public entry bindings and signatures
         run: make api-check
       - name: Run application checks
