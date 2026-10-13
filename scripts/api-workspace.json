@@ -7,6 +7,10 @@
     "entry": "etaf-ascii-video",
     "url": "https://github.com/emacs-taf/etaf-ascii-video.git"
   },
+  "etaf-bili": {
+    "entry": "etaf-bili",
+    "url": "https://github.com/emacs-taf/etaf-bili.git"
+  },
   "etaf-md-preview": {
     "entry": "etaf-md-preview",
     "url": "https://github.com/emacs-taf/etaf-md-preview.git"

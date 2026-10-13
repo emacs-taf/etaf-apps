@@ -46,6 +46,11 @@
       "revision": "704c9acffb5f80e49ba888f3023056110b6a7782",
       "branch": "main"
     },
+    "etaf-bili": {
+      "url": "https://github.com/emacs-taf/etaf-bili.git",
+      "revision": "5078d053a70cf8f37a0251f1ae61488bd7eee4ea",
+      "branch": "main"
+    },
     "etaf-algo-lab": {
       "url": "https://github.com/emacs-taf/etaf-algo-lab.git",
       "revision": "2a44ac6f1f02858a1c64d9e5b7d07ae7ce2b90a8",
