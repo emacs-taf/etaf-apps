@@ -9,6 +9,7 @@
 /etaf-algo-lab/
 /etaf-ascii-video/
 /etaf-video-player/
+/etaf-video-studio/
 
 *.pyc
 __pycache__/

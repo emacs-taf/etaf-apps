@@ -55,6 +55,11 @@
       "url": "https://github.com/emacs-taf/etaf-algo-lab.git",
       "revision": "2a44ac6f1f02858a1c64d9e5b7d07ae7ce2b90a8",
       "branch": "main"
+    },
+    "etaf-video-studio": {
+      "url": "https://github.com/emacs-taf/etaf-video-studio.git",
+      "revision": "54febdf9b91e5808e28016387ac1933c82e976c6",
+      "branch": "main"
     }
   }
 }

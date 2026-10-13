@@ -39,6 +39,10 @@
     "entry": "etaf-video-player",
     "url": "https://github.com/emacs-taf/etaf-video-player.git"
   },
+  "etaf-video-studio": {
+    "entry": "etaf-video-studio",
+    "url": "https://github.com/emacs-taf/etaf-video-studio.git"
+  },
   "etaf-weread": {
     "entry": "etaf-weread",
     "url": "https://github.com/emacs-taf/etaf-weread.git"
