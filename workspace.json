@@ -43,12 +43,12 @@
     },
     "etaf-video-player": {
       "url": "https://github.com/emacs-taf/etaf-video-player.git",
-      "revision": "704c9acffb5f80e49ba888f3023056110b6a7782",
+      "revision": "59801c6fe24bc9f7ae9ddc736486bf1afeb9de69",
       "branch": "main"
     },
     "etaf-bili": {
       "url": "https://github.com/emacs-taf/etaf-bili.git",
-      "revision": "5078d053a70cf8f37a0251f1ae61488bd7eee4ea",
+      "revision": "e8d97fbbd281694f38f09e4340182fcce80bdfae",
       "branch": "main"
     },
     "etaf-algo-lab": {
