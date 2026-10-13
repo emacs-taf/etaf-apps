@@ -3,12 +3,12 @@
   "repositories": {
     "etaf-ncm": {
       "url": "https://github.com/emacs-taf/etaf-ncm.git",
-      "revision": "7ca45f87e112f4166997fa5726c48ac8a8601f58",
+      "revision": "26272112aeb86077e7b19c75ca5bd189b01f434f",
       "branch": "main"
     },
     "etaf-weread": {
       "url": "https://github.com/emacs-taf/etaf-weread.git",
-      "revision": "68d4375dc6a89f605058765d02fe3a5a816a79a8",
+      "revision": "2cfd1fb0401c203f8c86c50f596cdff5af54f400",
       "branch": "main"
     },
     "etaf-md-preview": {
@@ -18,7 +18,7 @@
     },
     "etaf-reader": {
       "url": "https://github.com/emacs-taf/etaf-reader.git",
-      "revision": "aee924d28eb33e15d91a2edb44ea6ff66d3494d5",
+      "revision": "bbb70c5af58eacb917cdf5cb72294e60ec6c9e81",
       "branch": "main"
     },
     "etaf-ascii-video": {
