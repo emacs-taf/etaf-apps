@@ -31,6 +31,10 @@
     "entry": "etaf-rss",
     "url": "https://github.com/emacs-taf/etaf-rss.git"
   },
+  "etaf-screensaver": {
+    "entry": "etaf-screensaver",
+    "url": "https://github.com/emacs-taf/etaf-screensaver.git"
+  },
   "etaf-telega": {
     "entry": "etaf-telega",
     "url": "https://github.com/emacs-taf/etaf-telega.git"

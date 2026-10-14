@@ -20,6 +20,7 @@ follow.
 | [etaf-bili](https://github.com/emacs-taf/etaf-bili) | Bilibili client: popular feed, ranking and search with in-buffer playback through the media viewer | etaf, etaf-ui, ebox |
 | [etaf-youtube](https://github.com/emacs-taf/etaf-youtube) | YouTube client: account feeds, search, channels, playlists and in-canvas video playback | etaf, etaf-ui, etaf-db, ebox |
 | [etaf-algo-lab](https://github.com/emacs-taf/etaf-algo-lab) | Learn algorithms by watching, steering and comparing them inside Emacs | etaf, etaf-ui, ebox |
+| [etaf-screensaver](https://github.com/emacs-taf/etaf-screensaver) | Idle screensavers: canvas-only animation, input dismissal, grouped playback and adapted recorded animations | etaf, ebox |
 
 ## Requirements
 

@@ -11,6 +11,7 @@
 /etaf-video-player/
 /etaf-video-studio/
 /etaf-youtube/
+/etaf-screensaver/
 
 *.pyc
 __pycache__/

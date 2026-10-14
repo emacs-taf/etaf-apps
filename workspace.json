@@ -65,6 +65,11 @@
       "url": "https://github.com/emacs-taf/etaf-youtube.git",
       "revision": "0278d23cf1eb30826b9a8b73ae30468ff3e48b0b",
       "branch": "main"
+    },
+    "etaf-screensaver": {
+      "url": "https://github.com/emacs-taf/etaf-screensaver.git",
+      "revision": "8f3ec027b55d877c0ea2f036bf4c8f5b653f214b",
+      "branch": "main"
     }
   }
 }
