@@ -60,6 +60,11 @@
       "url": "https://github.com/emacs-taf/etaf-video-studio.git",
       "revision": "54febdf9b91e5808e28016387ac1933c82e976c6",
       "branch": "main"
+    },
+    "etaf-youtube": {
+      "url": "https://github.com/emacs-taf/etaf-youtube.git",
+      "revision": "c0cb15d693e63599c684cce59708e686c0b65caf",
+      "branch": "main"
     }
   }
 }
