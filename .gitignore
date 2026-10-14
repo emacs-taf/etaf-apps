@@ -10,6 +10,7 @@
 /etaf-ascii-video/
 /etaf-video-player/
 /etaf-video-studio/
+/etaf-youtube/
 
 *.pyc
 __pycache__/

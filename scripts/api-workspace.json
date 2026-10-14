@@ -46,5 +46,9 @@
   "etaf-weread": {
     "entry": "etaf-weread",
     "url": "https://github.com/emacs-taf/etaf-weread.git"
+  },
+  "etaf-youtube": {
+    "entry": "etaf-youtube",
+    "url": "https://github.com/emacs-taf/etaf-youtube.git"
   }
 }
