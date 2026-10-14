@@ -63,7 +63,7 @@
     },
     "etaf-youtube": {
       "url": "https://github.com/emacs-taf/etaf-youtube.git",
-      "revision": "c0cb15d693e63599c684cce59708e686c0b65caf",
+      "revision": "0278d23cf1eb30826b9a8b73ae30468ff3e48b0b",
       "branch": "main"
     }
   }
