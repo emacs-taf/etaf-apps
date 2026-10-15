@@ -68,7 +68,7 @@
     },
     "etaf-screensaver": {
       "url": "https://github.com/emacs-taf/etaf-screensaver.git",
-      "revision": "bc23f8f54dbccb1c0e3a794dc808aeae50bec86a",
+      "revision": "0b05de70d2d868f710144690c1f87847f9313dc1",
       "branch": "main"
     }
   }
