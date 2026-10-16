@@ -1,5 +1,10 @@
 name: Repository structure
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '23 21 * * *' # daily cross-repository drift check (21:23 UTC, 05:23 Beijing)
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
