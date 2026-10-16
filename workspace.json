@@ -3,72 +3,72 @@
   "repositories": {
     "etaf-ncm": {
       "url": "https://github.com/emacs-taf/etaf-ncm.git",
-      "revision": "26272112aeb86077e7b19c75ca5bd189b01f434f",
+      "revision": "1c0a7b809456c5ced032659b2055d23b643c32c0",
       "branch": "main"
     },
     "etaf-weread": {
       "url": "https://github.com/emacs-taf/etaf-weread.git",
-      "revision": "2cfd1fb0401c203f8c86c50f596cdff5af54f400",
+      "revision": "bef301da10802e5c4eaabe797edaefde51e66dee",
       "branch": "main"
     },
     "etaf-md-preview": {
       "url": "https://github.com/emacs-taf/etaf-md-preview.git",
-      "revision": "65592f6e6b92c3da7713ed03ce7cb5ae66f56af8",
+      "revision": "f283a6335faa0ed32bad232f51488d7639ad4bba",
       "branch": "main"
     },
     "etaf-reader": {
       "url": "https://github.com/emacs-taf/etaf-reader.git",
-      "revision": "bbb70c5af58eacb917cdf5cb72294e60ec6c9e81",
+      "revision": "1003c46d0622e39f54c72f6c46afd2577c5fb6b6",
       "branch": "main"
     },
     "etaf-ascii-video": {
       "url": "https://github.com/emacs-taf/etaf-ascii-video.git",
-      "revision": "be63329cbaf7698f208255f931cbdb23ea9ab93e",
+      "revision": "2a65396d514dd68705b9331ba165cf0f1017dee2",
       "branch": "main"
     },
     "etaf-pi": {
       "url": "https://github.com/emacs-taf/etaf-pi.git",
-      "revision": "c2c46d780c646bf3867124d6f07728eb69d2d05c",
+      "revision": "44eaa648cc48410c33c47dfc14b6267818da2dd0",
       "branch": "main"
     },
     "etaf-telega": {
       "url": "https://github.com/emacs-taf/etaf-telega.git",
-      "revision": "023c11b3779a272450d939604718f850c90d1ba2",
+      "revision": "a17409e23e1083a400d4f687d4839334fe22f3b7",
       "branch": "main"
     },
     "etaf-rss": {
       "url": "https://github.com/emacs-taf/etaf-rss.git",
-      "revision": "12e81a3eabfb4b00e2a29e556a25be141dc492e0",
+      "revision": "4618a7f0f3f5cf89a3aa8afef302354484443b54",
       "branch": "main"
     },
     "etaf-video-player": {
       "url": "https://github.com/emacs-taf/etaf-video-player.git",
-      "revision": "59801c6fe24bc9f7ae9ddc736486bf1afeb9de69",
+      "revision": "821331a49f1e40142249d24c95236dcf8536a270",
       "branch": "main"
     },
     "etaf-bili": {
       "url": "https://github.com/emacs-taf/etaf-bili.git",
-      "revision": "8a7d4266995e828eccc6989ce14fdaec00d7ff27",
+      "revision": "8a9d53555592362d461c641487685fca834750ad",
       "branch": "main"
     },
     "etaf-algo-lab": {
       "url": "https://github.com/emacs-taf/etaf-algo-lab.git",
-      "revision": "2a44ac6f1f02858a1c64d9e5b7d07ae7ce2b90a8",
+      "revision": "5ec3f2a47c14b96ba49632da819f291b94c96964",
       "branch": "main"
     },
     "etaf-video-studio": {
       "url": "https://github.com/emacs-taf/etaf-video-studio.git",
-      "revision": "54febdf9b91e5808e28016387ac1933c82e976c6",
+      "revision": "69c3e6ca8e1a597112eab95dc286c3aa21ebf717",
       "branch": "main"
     },
     "etaf-youtube": {
       "url": "https://github.com/emacs-taf/etaf-youtube.git",
-      "revision": "0278d23cf1eb30826b9a8b73ae30468ff3e48b0b",
+      "revision": "93f919381bfb2c9e20cc5d964945abe51713559a",
       "branch": "main"
     },
     "etaf-screensaver": {
       "url": "https://github.com/emacs-taf/etaf-screensaver.git",
-      "revision": "0b05de70d2d868f710144690c1f87847f9313dc1",
+      "revision": "9220e2a3a9d8340784e42f907251ef510e22e43f",
       "branch": "main"
     }
   }
