@@ -45,6 +45,40 @@ Look up provider Lisp from the enclosing workspace root with
 `python3 scripts/elisp.py def SYMBOL...` and `python3 scripts/elisp.py run ...`; run
 the application's own checks for application code.
 
+## Emacs 29 compatibility
+
+The providers keep Emacs 29.1 as their baseline and the CI runner installs
+Ubuntu's `emacs-nox` (29.3).  Breakage from newer Emacs versions or from a
+graphics-less build only surfaces there.  Three patterns cover everything
+seen so far:
+
+- **Emacs 30+ APIs**: a direct `(string-pixel-width string buffer)` call
+  fails every mount on 29 with `wrong-number-of-arguments`.  Probe the
+  arity and fall back (see `ebox--string-pixel-width-in`).
+- **C-implemented graphics functions**: `image-size` and `image-flush` are
+  C functions on 29, so `require`ing `image` gives the byte compiler no
+  definition and `byte-compile-error-on-warn` fails the compile.  Declare
+  them near the requires: `(declare-function image-size "image.c" (spec
+  &optional pixels frame))`, `(declare-function image-flush "image.c"
+  (image &optional frame))`.
+- **Graphics-only scenarios** cannot run without a display; guard them with
+  `(skip-unless (and (display-graphic-p) (image-type-available-p 'png)))`
+  (see the covers in `etaf-ncm` and the image scenarios in `etaf-youtube`
+  and `etaf-screensaver`).
+
+Reproduce all three locally without a second Emacs: hide the C functions
+before a `byte-compile-error-on-warn` compile, and run the suite in batch
+(where `display-graphic-p` is nil, as on the runner):
+
+```sh
+emacs -Q --batch -L . -L lisp -L ../../etaf -L ../../etaf-ui -L ../../ebox \
+  -L ../../ecss -L ../../etaf-db \
+  --eval '(setq byte-compile-error-on-warn t)' \
+  --eval '(fmakunbound (quote image-size))' \
+  --eval '(fmakunbound (quote image-flush))' \
+  --eval '(dolist (file (list "lisp/a.el" "app.el")) (unless (byte-compile-file file) (kill-emacs 1)))'
+```
+
 ## Measuring interaction stalls
 
 A perceived stall (a hover highlight that cannot keep up, a drag that lags) is
