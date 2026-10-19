@@ -1,69 +1,19 @@
-# ETAF applications
+# ETAF applications (archived)
 
-Applications built on the ETAF text-application framework. Each application is an
-independent Emacs Lisp repository with its own history, public interface and checks;
-this root owns their integration checkpoint, shared tooling and the conventions they
-follow.
+This repository is archived. The application workspace it hosted was merged into
+the single [emacs-taf](https://github.com/emacs-taf/emacs-taf) workspace, where
+every repository — framework packages, applications and games — is one sibling
+checkout registered in `workspace.json`.
 
-| Application | Responsibility | Framework dependencies |
-| --- | --- | --- |
-| [etaf-ncm](https://github.com/emacs-taf/etaf-ncm) | NetEase Cloud Music player: library browsing, playback control, lyrics and queue | etaf, etaf-ui, ebox |
-| [etaf-weread](https://github.com/emacs-taf/etaf-weread) | WeChat Reading client: shelf, notebook, highlights, store search, statistics and a local SQLite highlight index | etaf, etaf-ui, etaf-db, ebox |
-| [etaf-md-preview](https://github.com/emacs-taf/etaf-md-preview) | Markdown reading view: centered measure, headings, tables, callouts, code, footnotes and media cards | etaf, etaf-ui, ebox |
-| [etaf-rss](https://github.com/emacs-taf/etaf-rss) | RSS reader: subscriptions, folders, unread and starred scopes, reading pane, search and OPML | etaf, etaf-ui, ebox |
-| [etaf-reader](https://github.com/emacs-taf/etaf-reader) | Local ebook reader: library scan, EPUB/TXT/Markdown/HTML/FB2/PDF import, paged and scrolling reading, annotations and progress | etaf, etaf-ui, etaf-db, ebox |
-| [etaf-pi](https://github.com/emacs-taf/etaf-pi) | Native Pi agent client: streamed conversations, tool output, session recovery and multiline input | etaf, etaf-ui, ebox |
-| [etaf-telega](https://github.com/emacs-taf/etaf-telega) | Telegram client on Telega's TDLib backend: chats, live message stream, in-place composer and message actions | etaf, etaf-ui, ebox |
-| [etaf-ascii-video](https://github.com/emacs-taf/etaf-ascii-video) | Video and HTTP(S) streams inside an Emacs buffer as pure characters | etaf, etaf-ui, ebox |
-| [etaf-video-player](https://github.com/emacs-taf/etaf-video-player) | Local video and streams as sharp image frames with sound | etaf, etaf-ui, ebox |
-| [etaf-video-studio](https://github.com/emacs-taf/etaf-video-studio) | Record, edit and publish software tutorials through the video-project skill: recording, non-destructive edits, background previews/exports and a two-step publish flow | etaf, etaf-ui, ebox |
-| [etaf-bili](https://github.com/emacs-taf/etaf-bili) | Bilibili client: popular feed, ranking and search with in-buffer playback through the media viewer | etaf, etaf-ui, ebox |
-| [etaf-youtube](https://github.com/emacs-taf/etaf-youtube) | YouTube client: account feeds, search, channels, playlists and in-canvas video playback | etaf, etaf-ui, etaf-db, ebox |
-| [etaf-algo-lab](https://github.com/emacs-taf/etaf-algo-lab) | Learn algorithms by watching, steering and comparing them inside Emacs | etaf, etaf-ui, ebox |
-| [etaf-screensaver](https://github.com/emacs-taf/etaf-screensaver) | Idle screensavers: canvas-only animation, input dismissal, grouped playback and adapted recorded animations | etaf, ebox |
+- Sources: each application is its own repository under the `emacs-taf`
+  organisation (`etaf-ncm`, `etaf-weread`, `etaf-md-preview`, …).
+- Development: clone the workspace root and follow its README. There is one
+  checkout per repository, so no second workspace has to be kept in sync.
+- Installation: `M-x etaf-install` from the package archive at
+  <https://etaf.top/packages/>, or install a single package from MELPA-style
+  archive metadata.
+- The application table, the application and integration contract, the shared
+  checks and the integration checkpoint moved to the workspace root repository
+  (`README.md`, `docs/architecture.zh-CN.md`, `workspace.json`).
 
-## Requirements
-
-- Emacs 29.1 or newer, with the framework packages available on `load-path`.
-- Python 3.10+ and Git for the repository policy checks.
-- The runtime dependencies of the application you run; see its README.
-
-The framework repositories are the dependency providers (`etaf`, `etaf-ui`, `ebox`,
-`ecss`). Clone them as siblings of this directory, keeping those directory names; each
-application's `scripts/api-workspace.json` records the providers it is checked against
-and can fetch them for a standalone checkout.
-
-## Setup
-
-```sh
-git clone -o origin https://github.com/emacs-taf/etaf-apps.git
-cd etaf-apps
-git clone -o origin https://github.com/emacs-taf/etaf-ncm.git
-make setup-hooks
-```
-
-Each application README documents its own installation and usage. This root adds the
-collective checks:
-
-```sh
-make check                  # policy, compilation, public API and acceptance for every application
-make check EMACS=/path/to/emacs
-make api-check              # public entry bindings and signatures of every application
-(cd etaf-ncm && python3 scripts/check-api.py --root . --fetch-providers --providers-dir ../..)
-                            # fetch the providers the applications are checked against
-```
-
-The recorded revisions in `workspace.json` identify the application commits verified
-together; they are an integration checkpoint, not a release certification.
-
-## Documentation
-
-- [Application and integration contract](docs/architecture.zh-CN.md)
-- [Development instructions for this workspace](AGENTS.md)
-- Per-application manuals and architecture notes in each application repository.
-
-## Contributing
-
-Commit in the owning repository, keep the application's `make check` green, then
-refresh the recorded revision in `workspace.json`. Message and structure gates run
-from `.githooks` after `make setup-hooks`.
+Git history here remains readable; nothing in it was rewritten.
